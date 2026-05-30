@@ -1,0 +1,6 @@
+streamlit
+pandas
+numpy
+pandera
+duckdb
+plotly
