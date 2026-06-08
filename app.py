@@ -56,6 +56,40 @@ if df is not None:
 
         if not issues:
             st.success("✅ Pipeline validation passed. No remediation needed.")
+
+            st.subheader("Healthy Pipeline Summary")
+
+            col1, col2, col3, col4 = st.columns(4)
+
+            with col1:
+                st.metric(
+                    label="Pipeline Status",
+                    value="Healthy"
+                )
+
+            with col2:
+                st.metric(
+                    label="Risk Level",
+                    value="LOW"
+                )
+
+            with col3:
+                st.metric(
+                    label="Rows Processed",
+                    value=len(df)
+                )
+
+            with col4:
+                st.metric(
+                    label="Validation Checks Passed",
+                    value="6 / 6"
+                )
+
+            st.info(
+                "CleanFlow did not detect schema drift, missing required fields, duplicate keys, "
+                "invalid dates, invalid categories, or datatype mismatches. The file is safe to continue "
+                "to downstream reporting, billing validation, and analytics workflows."
+            )
         else:
             st.error("🚨 Pipeline validation failed. CleanFlow Agent activated.")
 

@@ -1,0 +1,11 @@
+appointment_id,patient_id,appointment_date,payer_name,auth_status,amount,therapy_type,center_id
+2001,P101,2026-07-01,Aetna,Approved,250,IVIG,ATL01
+2002,P102,2026-07-01,BCBS,Pending,300,Rituximab,ATL01
+2003,P103,2026-07-02,Cigna,Approved,400,Remicade,ATL02
+2004,P104,2026-07-02,United,Denied,350,IVIG,ATL01
+2005,P105,2026-07-03,Aetna,Approved,500,Ocrevus,ATL03
+2006,P106,2026-07-03,BCBS,Pending,275,IVIG,ATL02
+2007,P107,2026-07-04,Cigna,Approved,625,Rituximab,ATL01
+2008,P108,2026-07-04,United,Approved,450,Remicade,ATL03
+2009,P109,2026-07-05,Aetna,Pending,390,IVIG,ATL02
+2010,P110,2026-07-05,BCBS,Approved,720,Ocrevus,ATL01

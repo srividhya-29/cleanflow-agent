@@ -9,6 +9,20 @@ def analyze_root_cause(issues):
     confidence = "Low"
     escalation = "Manual review recommended."
 
+    if "Schema Drift" in issue_types or "Unexpected Columns" in issue_types:
+     primary_root_cause = (
+        "Upstream schema drift detected between the incoming file and expected pipeline contract."
+    )
+     confidence = "High"
+     escalation = (
+        "Review source file contract, update ingestion mapping, and confirm whether the upstream column change was intentional."
+    )
+    if "Schema Drift" in issue_types:
+     evidence.append("Expected column missing from incoming file")
+
+    if "Unexpected Columns" in issue_types:
+     evidence.append("Unexpected column received in incoming file")
+
     if "Missing Required Values" in issue_types:
         evidence.append("Missing patient_id values")
 
